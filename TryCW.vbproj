@@ -95,6 +95,7 @@
     <Content Include="Exercises.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="Practice.aspx" />
+    <Content Include="SignUp.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
@@ -137,6 +138,13 @@
     </Compile>
     <Compile Include="Practice.aspx.vb">
       <DependentUpon>Practice.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SignUp.aspx.designer.vb">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.aspx.vb">
+      <DependentUpon>SignUp.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="WebForm1.aspx.designer.vb">

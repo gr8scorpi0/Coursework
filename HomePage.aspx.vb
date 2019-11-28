@@ -13,22 +13,26 @@ Public Class HomePage
     End Sub
 
     Protected Sub LoginButton_Click(sender As Object, e As EventArgs) Handles LoginButton.Click
-        '  If TextBox2.Text <> "1234" Then
-        'Label3.Visible = True
-        'Label3.Text = "Incorrect Password"
-        ' Else
-
-        'Label3.Visible = True
-        'Label3.Text = "Welcome " + TextBox1.Text
-        'End If
         Dim con As New SqlConnection(ConnectionStrings("SomeeConnectionString").ConnectionString)
-        Dim SQL As String = "INSERT INTO [UserLogins] ([Username], [Password]) " &
-            "VALUES ('" & UsernameTextBox.Text & "','" & PasswordTextBox.Text & "')"
-        Dim cmd As New SqlCommand(SQL, con)
-        con.Open()
-        cmd.ExecuteNonQuery()
-        con.Close()
-        MsgBox("Sign up Successful!")
+
+        Dim SQL = "SELECT * " &
+              "FROM [UserLogins] " &
+         "WHERE Username = '" & UsernameTextBox.Text & "'" &
+          "AND Password = '" & PasswordTextBox.Text & "'"
+
+        Dim dAdapter = New SqlDataAdapter(SQL, con)
+        Dim dSet = New DataSet
+        dAdapter.Fill(dSet, "UserLogins")
+        If dSet.Tables("UserLogins").Rows.Count = 1 Then
+            Label3.Visible = True
+            Label3.Text = "Welcome " + UsernameTextBox.Text
+
+        Else
+            Label3.Visible = True
+            Label3.Text = "Incorrect Password"
+        End If
+
+
 
 
 

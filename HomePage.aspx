@@ -67,12 +67,13 @@
             <tr>
                 <td class="auto-style2">&nbsp;</td>
                 <td>
-        <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="Label3" runat="server" Text="Login Successful" Visible="False"></asp:Label>
                 </td>
             </tr>
         </table>
         <p>
-            &nbsp;</p>
+            <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="#FF9900" NavigateUrl="~/SignUp.aspx">Don&#39;t have an account? Sign Up Here</asp:HyperLink>
+        </p>
         <p style="text-align: left">
             &nbsp;</p>
         <br />
