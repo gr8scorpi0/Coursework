@@ -12,10 +12,20 @@ Public Class SignUp
         Dim SQL As String = "INSERT INTO [UserLogins] ([Username], [Password]) " &
             "VALUES ('" & UsernameTextBox.Text & "','" & PasswordTextBox.Text & "')"
         Dim cmd As New SqlCommand(SQL, con)
-        con.Open()
-        cmd.ExecuteNonQuery()
-        con.Close()
-        MsgBox("Sign up Successful!")
+
+
+        If UsernameTextBox.Text = " " Or UsernameTextBox.Text = "" Or PasswordTextBox.Text = "" Or PasswordTextBox.Text = " " Then
+            '  Label3.Visible = True
+            ' Label3.Text = "Welcome " + UsernameTextBox.Text
+            MsgBox("Username or Password format are invalid make sure each section is completed.")
+
+        Else
+            con.Open()
+            cmd.ExecuteNonQuery()
+            con.Close()
+            Response.Redirect("HomePageLogged-in.aspx")
+
+        End If
     End Sub
 
 

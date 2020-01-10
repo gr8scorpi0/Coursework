@@ -24,12 +24,11 @@ Public Class HomePage
         Dim dSet = New DataSet
         dAdapter.Fill(dSet, "UserLogins")
         If dSet.Tables("UserLogins").Rows.Count = 1 Then
-            Label3.Visible = True
-            Label3.Text = "Welcome " + UsernameTextBox.Text
 
+            Response.Redirect("HomePageLogged-in.aspx")
         Else
             Label3.Visible = True
-            Label3.Text = "Incorrect Password"
+            Label3.Text = "Incorrect Password or Username"
         End If
 
 

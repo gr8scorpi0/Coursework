@@ -25,9 +25,9 @@
                     <DynamicSelectedStyle BackColor="#666666" />
                     <Items>
                         <asp:MenuItem Text="HomePage" Value="HomePage" NavigateUrl="~/HomePage.aspx"></asp:MenuItem>
-                        <asp:MenuItem Text="Practice" Value="Practice" NavigateUrl="~/Practice.aspx">
-                            <asp:MenuItem Text="Exercises" Value="Exercises" NavigateUrl="~/Exercises.aspx"></asp:MenuItem>
-                            <asp:MenuItem Text="Progress" Value="Progress"></asp:MenuItem>
+                        <asp:MenuItem Text="Practice" Value="Practice" NavigateUrl="~/HomePage.aspx">
+                            <asp:MenuItem Text="Exercises" Value="Exercises" NavigateUrl="~/HomePage.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Progress" Value="Progress" NavigateUrl="~/HomePage.aspx"></asp:MenuItem>
                         </asp:MenuItem>
                     </Items>
                     <StaticHoverStyle BackColor="#666666" ForeColor="White" Font-Bold="True" />
@@ -67,7 +67,7 @@
             <tr>
                 <td class="auto-style2">&nbsp;</td>
                 <td>
-        <asp:Label ID="Label3" runat="server" Text="Login Successful" Visible="False"></asp:Label>
+        <asp:Label ID="Label3" runat="server" Visible="False"></asp:Label>
                 </td>
             </tr>
         </table>

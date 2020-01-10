@@ -28,10 +28,7 @@
                 <DynamicSelectedStyle BackColor="#666666" />
                 <Items>
                    <asp:MenuItem Text="HomePage" Value="HomePage" NavigateUrl="~/HomePage.aspx"></asp:MenuItem>
-                    <asp:MenuItem Text="Practice" Value="Practice" NavigateUrl="~/Practice.aspx">
-                        <asp:MenuItem Text="Exercises" Value="Exercises" NavigateUrl="~/Exercises.aspx"></asp:MenuItem>
-                        <asp:MenuItem Text="Progress" Value="Progress"></asp:MenuItem>
-                    </asp:MenuItem>
+                   
                 </Items>
                 <StaticHoverStyle BackColor="#666666" ForeColor="White" Font-Bold="True" />
                 <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
@@ -63,8 +60,7 @@
                         <asp:TextBox ID="PasswordTextBox" runat="server" TextMode="Password"></asp:TextBox>
 &nbsp;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:CheckBox ID="CheckBox2" runat="server" Text="Show Password" />
-&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;
                         <br />
                         <br />
                         <asp:Button ID="SignUpButton" runat="server" Text="Sign Up" />

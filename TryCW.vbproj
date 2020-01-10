@@ -51,6 +51,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web.DynamicData" />
@@ -92,14 +93,25 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CoachExerciseAdd.aspx" />
     <Content Include="Exercises.aspx" />
     <Content Include="HomePage.aspx" />
+    <Content Include="Histologytest.aspx" />
+    <Content Include="HomePageLogged-in.aspx" />
     <Content Include="Practice.aspx" />
+    <Content Include="Progress.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoachExerciseAdd.aspx.designer.vb">
+      <DependentUpon>CoachExerciseAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CoachExerciseAdd.aspx.vb">
+      <DependentUpon>CoachExerciseAdd.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Exercises.aspx.designer.vb">
       <DependentUpon>Exercises.aspx</DependentUpon>
     </Compile>
@@ -112,6 +124,20 @@
     </Compile>
     <Compile Include="HomePage.aspx.vb">
       <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Histologytest.aspx.designer.vb">
+      <DependentUpon>Histologytest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Histologytest.aspx.vb">
+      <DependentUpon>Histologytest.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HomePageLogged-in.aspx.designer.vb">
+      <DependentUpon>HomePageLogged-in.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomePageLogged-in.aspx.vb">
+      <DependentUpon>HomePageLogged-in.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -138,6 +164,13 @@
     </Compile>
     <Compile Include="Practice.aspx.vb">
       <DependentUpon>Practice.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Progress.aspx.designer.vb">
+      <DependentUpon>Progress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Progress.aspx.vb">
+      <DependentUpon>Progress.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="SignUp.aspx.designer.vb">
