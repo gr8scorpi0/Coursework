@@ -20,15 +20,20 @@ Public Class HomePage
          "WHERE Username = '" & UsernameTextBox.Text & "'" &
           "AND Password = '" & PasswordTextBox.Text & "'"
 
+
         Dim dAdapter = New SqlDataAdapter(SQL, con)
         Dim dSet = New DataSet
         dAdapter.Fill(dSet, "UserLogins")
-        If dSet.Tables("UserLogins").Rows.Count = 1 Then
+        If dSet.Tables("UserLogins").Rows.Count = 1 Then 'And dSet.Tables("UserLogins").Rows.ToString() <> "Aline" Then
 
             Response.Redirect("HomePageLogged-in.aspx")
+            ' ElseIf 
+            'Response.Redirect("HomePage-Coach.aspx")
         Else
             Label3.Visible = True
             Label3.Text = "Incorrect Password or Username"
+
+
         End If
 
 

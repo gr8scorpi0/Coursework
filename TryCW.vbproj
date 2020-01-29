@@ -93,7 +93,8 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CoachExerciseAdd.aspx" />
+    <Content Include="CreateQuiz.aspx" />
+    <Content Include="HomePage-Coach.aspx" />
     <Content Include="Exercises.aspx" />
     <Content Include="HomePage.aspx" />
     <Content Include="Histologytest.aspx" />
@@ -105,11 +106,18 @@
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CoachExerciseAdd.aspx.designer.vb">
-      <DependentUpon>CoachExerciseAdd.aspx</DependentUpon>
+    <Compile Include="CreateQuiz.aspx.designer.vb">
+      <DependentUpon>CreateQuiz.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CoachExerciseAdd.aspx.vb">
-      <DependentUpon>CoachExerciseAdd.aspx</DependentUpon>
+    <Compile Include="CreateQuiz.aspx.vb">
+      <DependentUpon>CreateQuiz.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="HomePage-Coach.aspx.designer.vb">
+      <DependentUpon>HomePage-Coach.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage-Coach.aspx.vb">
+      <DependentUpon>HomePage-Coach.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Exercises.aspx.designer.vb">

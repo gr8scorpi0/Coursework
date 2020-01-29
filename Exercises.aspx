@@ -10,10 +10,10 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 363px;
+            width: 888px;
         }
         .auto-style3 {
-            width: 363px;
+            width: 888px;
             height: 407px;
         }
         .auto-style4 {
@@ -21,13 +21,14 @@
         }
         .auto-style5 {
             width: 771px;
+            height: 145px;
         }
         .auto-style6 {
             width: 771px;
             text-align: left;
         }
         .auto-style7 {
-            width: 363px;
+            width: 888px;
             height: 30px;
         }
         .auto-style8 {
@@ -36,6 +37,13 @@
         }
         .auto-style9 {
             height: 30px;
+        }
+        .auto-style10 {
+            width: 888px;
+            height: 145px;
+        }
+        .auto-style11 {
+            height: 145px;
         }
     </style>
 </head>
@@ -62,30 +70,38 @@
                  </asp:Panel>
         </div>
     <p>
-        Here you may find exercises for you to practice for your exam. After you finish a task your progress will be recorded and you will be able to access it in the progress section on the menu.<table class="auto-style1">
+        &nbsp;<table class="auto-style1">
             <tr>
-                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style10"></td>
                 <td class="auto-style5">State the name of the problem in the cell.</td>
-                <td>&nbsp;</td>
+                <td class="auto-style11"></td>
             </tr>
             <tr>
                 <td class="auto-style2">&nbsp;</td>
                 <td class="auto-style6" rowspan="2">
-                    <asp:Image ID="Image1" runat="server" Height="360px" Width="421px" ImageUrl="https://bcf.technion.ac.il/wp-content/uploads/2018/05/Histology.jpg" />
+                    <asp:Button ID="Button1" runat="server" Text="Button" />
+                    <br />
+                    <br />
+                    <asp:Button ID="Button2" runat="server" Text="Button" />
+                    <br />
+                    <br />
+                    <asp:Button ID="Button3" runat="server" Text="Button" />
                 </td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style3"></td>
-                <td class="auto-style4">
-                    <asp:Label ID="Label1" runat="server" Text="Histology" Visible="False"></asp:Label>
+                <td class="auto-style3">
+                    <asp:Image ID="Image1" runat="server" Height="219px" Width="260px" />
                 </td>
+                <td class="auto-style4">
+                    &nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style7"></td>
-                <td class="auto-style8">
-                    <asp:Button ID="Button1" runat="server" Text="Show Answer" />
+                <td class="auto-style7">
+                    <asp:SqlDataSource ID="QuestionsTable" runat="server" ConnectionString="<%$ ConnectionStrings:trytablesConnectionString %>" SelectCommand="SELECT * FROM [AddQuestions]"></asp:SqlDataSource>
                 </td>
+                <td class="auto-style8">
+                    &nbsp;</td>
                 <td class="auto-style9"></td>
             </tr>
         </table>
