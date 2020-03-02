@@ -38,10 +38,10 @@
                 <DynamicMenuStyle BackColor="#FFCC00" />
                 <DynamicSelectedStyle BackColor="#666666" />
                 <Items>
-                   <asp:MenuItem Text="HomePage" Value="HomePage" NavigateUrl="~/HomePage.aspx"></asp:MenuItem>
-                    <asp:MenuItem Text="Practice" Value="Practice" NavigateUrl="~/Practice.aspx">
-                        <asp:MenuItem Text="Exercises" Value="Exercises" NavigateUrl="~/CoachExerciseAdd.aspx"></asp:MenuItem>
+                   <asp:MenuItem Text="HomePage" Value="HomePage" NavigateUrl="~/HomePage-Coach.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Add" Value="Add Questions" NavigateUrl="~/CreateQuiz.aspx">
                     </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/EditExercises.aspx" Text="Edit" Value="Edit Questions"></asp:MenuItem>
                 </Items>
                 <StaticHoverStyle BackColor="#666666" ForeColor="White" Font-Bold="True" />
                 <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />

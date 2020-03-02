@@ -343,6 +343,42 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:TryCW.EditExercises._error_Image">
+<summary>
+error_Image control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TryCW.EditExercises._Error_Label">
+<summary>
+Error_Label control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TryCW.EditExercises._done_Image">
+<summary>
+done_Image control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TryCW.EditExercises._done_Label">
+<summary>
+done_Label control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:TryCW.EditExercises._Image1">
 <summary>
 Image1 control.

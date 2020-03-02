@@ -6,14 +6,21 @@ Public Class EditExercises
         If Session.Item("Username") Is Nothing Then
             Response.Redirect("Homepage.aspx")
         End If
-
+        Error_Label.Visible = False
+        done_Label.Visible = False
+        done_Image.Visible = False
+        error_Image.Visible = False
     End Sub
 
     Protected Sub ImageURL_Button_Click(sender As Object, e As EventArgs) Handles ImageURL_Button.Click
-        If Answer_TextBox.Text.Length < 0 Then
-            MsgBox("Fill the Answer Field")
-        ElseIf ImageURL_TextBox.Text.Length < 0 Then
-            MsgBox("Fill the Image URL Field")
+        If QID_TextBox.Text.Length <= 0 Then
+            Error_Label.Visible = True
+            error_Image.Visible = True
+            Error_Label.Text = ("Fill in the QuestionID Field")
+        ElseIf ImageURL_TextBox.Text.Length <= 0 Then
+            Error_Label.Visible = True
+            error_Image.Visible = True
+            Error_Label.Text = ("Fill in the Image URL Field")
         Else
 
 
@@ -52,21 +59,34 @@ Public Class EditExercises
     End Sub
 
     Protected Sub Answer_Button_Click(sender As Object, e As EventArgs) Handles Answer_Button.Click
-        Dim con As New SqlConnection(ConnectionStrings("SomeeConnectionString").ConnectionString)
+        If QID_TextBox.Text.Length <= 0 Then
+            Error_Label.Visible = True
+            error_Image.Visible = True
+            Error_Label.Text = ("Fill in the QuestionID Field")
 
-        Dim SQL As String = "UPDATE [AddQuestions] " &
-            "SET Answer ='" & Answer_TextBox.Text & "'" &
-            "WHERE QuestionID = '" & QID_TextBox.Text & "'"
-        Dim cmd As New SqlCommand(SQL, con)
+        ElseIf Answer_TextBox.Text.Length <= 0 Then
+            Error_Label.Visible = True
+            error_Image.Visible = True
+            Error_Label.Text = ("Fill in the Answer Field")
+        Else
+            Dim con As New SqlConnection(ConnectionStrings("SomeeConnectionString").ConnectionString)
 
-        Dim dAdapter = New SqlDataAdapter(SQL, con)
-        Dim dSet = New DataSet
-        dAdapter.Fill(dSet, "AddQuestions")
+            Dim SQL As String = "UPDATE [AddQuestions] " &
+                "SET Answer ='" & Answer_TextBox.Text & "'" &
+                "WHERE QuestionID = '" & QID_TextBox.Text & "'"
+            Dim cmd As New SqlCommand(SQL, con)
 
-        con.Open()
-        cmd.ExecuteNonQuery()
-        con.Close()
-        MsgBox(" Change was made Successfully!")
+            Dim dAdapter = New SqlDataAdapter(SQL, con)
+            Dim dSet = New DataSet
+            dAdapter.Fill(dSet, "AddQuestions")
+
+            con.Open()
+            cmd.ExecuteNonQuery()
+            con.Close()
+            done_Label.Visible = True
+            done_Image.Visible = True
+            done_Label.Text = (" Change was made Successfully!")
+        End If
     End Sub
 
 

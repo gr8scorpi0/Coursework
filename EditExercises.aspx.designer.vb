@@ -131,6 +131,42 @@ Partial Public Class EditExercises
     Protected WithEvents Answer_TextBox As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''error_Image control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents error_Image As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
+    '''Error_Label control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Error_Label As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''done_Image control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents done_Image As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
+    '''done_Label control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents done_Label As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Image1 control.
     '''</summary>
     '''<remarks>

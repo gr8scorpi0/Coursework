@@ -56,7 +56,11 @@
         <asp:TextBox ID="Answer_TextBox" runat="server"></asp:TextBox>
         <br />
         <br />
+        <asp:Image ID="error_Image" runat="server" Height="62px" ImageUrl="https://img.icons8.com/pastel-glyph/2x/error.png" Width="64px" />
+        <asp:Label ID="Error_Label" runat="server" Text="Label"></asp:Label>
         <br />
+        <asp:Image ID="done_Image" runat="server" Height="50px" ImageUrl="https://pngimage.net/wp-content/uploads/2018/05/done-icon-png-8.png" Width="46px" />
+        <asp:Label ID="done_Label" runat="server" Text="Label"></asp:Label>
         <br />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;

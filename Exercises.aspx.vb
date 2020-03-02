@@ -136,8 +136,10 @@ Public Class Exercises
 
     Protected Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
-        If TimeLabel.Text < 0 Then
+        If TimeLabel.Text < 1 Then
             TimeLabel.Text = "Times UPPP"
+            Timer1.Enabled = False
+
 
             If Button1.Text = Session("Answer") Then
                 Button1.BackColor = System.Drawing.Color.Green
