@@ -28,12 +28,17 @@
                 <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
                 <StaticSelectedStyle BackColor="#1C5E55" />
             </asp:Menu>
+                 <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="#663300" NavigateUrl="~/HomePage.aspx">Log Out</asp:HyperLink>
                  </asp:Panel>
         </div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SomeeConnectionString %>" SelectCommand="SELECT * FROM [UserLogins]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SomeeConnectionString %>" SelectCommand="SELECT * FROM [TrackScore] WHERE ([Username] = @Username)">
+            <SelectParameters>
+                <asp:SessionParameter Name="Username" SessionField="Username" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
         <asp:Chart ID="Chart1" runat="server" DataSourceID="SqlDataSource1">
             <series>
-                <asp:Series Name="Series1" XValueMember="Username" YValueMembers="Password">
+                <asp:Series Name="Series1" XValueMember="Date" YValueMembers="QuizScore">
                 </asp:Series>
             </series>
             <chartareas>

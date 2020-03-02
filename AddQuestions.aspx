@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="CreateQuiz.aspx.vb" Inherits="TryCW.CreateQuiz" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="AddQuestions.aspx.vb" Inherits="TryCW.CreateQuiz" %>
 
 <!DOCTYPE html>
 
@@ -13,7 +13,7 @@
             width: 100%;
         }
         .auto-style3 {
-            width: 950px;
+            width: 716px;
         }
         .auto-style4 {
             text-align: center;
@@ -47,6 +47,7 @@
                 <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
                 <StaticSelectedStyle BackColor="#1C5E55" />
             </asp:Menu>
+                    <asp:HyperLink ID="HyperLink2" runat="server" ForeColor="#663300" NavigateUrl="~/HomePage.aspx">Log Out</asp:HyperLink>
                  </asp:Panel>
         </div>
         <br />
@@ -57,7 +58,7 @@
             <tr>
                 <td class="auto-style4" colspan="2"><span class="auto-style5">To Upload an image visit
                     </span>
-                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="https://pt.imgbb.com/" CssClass="auto-style5">this website</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="https://pt.imgbb.com/" CssClass="auto-style5" ForeColor="#CADBD9" Target="_search">this website</asp:HyperLink>
                     <span class="auto-style5">&nbsp;and follow the instructions below.<br />
                     <br />
                     <br />
@@ -65,26 +66,29 @@
             </tr>
             <tr>
                 <td class="auto-style3">
-                    <asp:Image ID="Image1" runat="server" Height="384px" ImageUrl="https://i.ibb.co/hsnSPh2/Img-BB-Tutorial.png" Width="654px" BorderColor="Silver" BorderStyle="Dotted" BorderWidth="5px" />
+                    <asp:Image ID="Image1" runat="server" Height="400px" ImageUrl="https://i.ibb.co/hsnSPh2/Img-BB-Tutorial.png" Width="500px" BorderColor="Silver" BorderStyle="Dotted" BorderWidth="5px" />
                 </td>
                 <td class="auto-style4">
-                    <asp:Label ID="Label5" runat="server" Text="   Click on &quot;Start Uploading&quot;  " BackColor="#CADBD9" BorderColor="Silver" BorderWidth="5px" Height="172px" Width="442px"></asp:Label>
+                    <asp:Label ID="Label5" runat="server" Text="   Click on &quot;Start Uploading&quot;  " BackColor="#CADBD9" BorderColor="Silver" BorderWidth="5px" Height="100px" Width="472px"></asp:Label>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style3">
-                    <asp:Image ID="Image2" runat="server" Height="409px" ImageUrl="https://i.ibb.co/2F2Gyf8/Img-BB-Tutorial-3.png" Width="661px" BorderColor="Silver" BorderStyle="Dotted" BorderWidth="5px" />
+                    <asp:Image ID="Image2" runat="server" Height="400px" ImageUrl="https://i.ibb.co/2F2Gyf8/Img-BB-Tutorial-3.png" Width="500px" BorderColor="Silver" BorderStyle="Dotted" BorderWidth="5px" />
                 </td>
                 <td class="auto-style4">
-                    <asp:Label ID="Label6" runat="server" Text="After Uploading choose HTML Full Linked and paste it to the Image URL." BackColor="#CADBD9" BorderColor="Silver" BorderWidth="5px" Height="203px" Width="446px"></asp:Label>
+                    <asp:Label ID="Label6" runat="server" Text="After Uploading choose HTML Full Linked and paste it to the Image URL." BackColor="#CADBD9" BorderColor="Silver" BorderWidth="5px" Height="100px" Width="472px"></asp:Label>
                 </td>
             </tr>
         </table>
         <br />
+        <br />
+        <br />
+        <br />
         <table class="auto-style6">
             <tr>
                 <td>
-                    <asp:Panel ID="Panel3" runat="server" BackColor="#CADBD9" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="15px" CssClass="auto-style1" Height="440px" HorizontalAlign="Center" Width="619px">
+                    <asp:Panel ID="Panel3" runat="server" BackColor="#CADBD9" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="15px" CssClass="auto-style1" Height="340px" HorizontalAlign="Center" Width="619px">
                         <br />
                         <asp:Label ID="Label3" runat="server" Text="Answer:"></asp:Label>
                         &nbsp;&nbsp;

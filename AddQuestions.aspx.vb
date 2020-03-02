@@ -5,7 +5,9 @@ Public Class CreateQuiz
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
+        If Session.Item("Username") Is Nothing Then
+            Response.Redirect("Homepage.aspx")
+        End If
     End Sub
 
     Protected Sub Answer_TextBox_TextChanged(sender As Object, e As EventArgs) Handles Answer_TextBox.TextChanged
@@ -39,7 +41,7 @@ Public Class CreateQuiz
 
 
                 Dim con As New SqlConnection(ConnectionStrings("SomeeConnectionString").ConnectionString)
-                Dim QuestionID As Integer = 0
+
                 Dim SQL As String = "INSERT INTO [AddQuestions] ([Answer], [ImageLink]) " &
                     "VALUES ('" & Answer_TextBox.Text & "','" & FinalLink & "')"
                 Dim cmd As New SqlCommand(SQL, con)
@@ -49,7 +51,7 @@ Public Class CreateQuiz
                 con.Close()
                 MsgBox(" Upload Successful!")
 
-                'Image_Upload.FileContent(cmd, Image_Upload)
+
             End If
         End If
     End Sub
@@ -57,13 +59,5 @@ Public Class CreateQuiz
     Protected Sub Cancel_Button_Click(sender As Object, e As EventArgs) Handles Cancel_Button.Click
 
     End Sub
-    ' Public Class HttpPostedFile
-    'PostedFile = Image_Upload.PostedFile 
-    'Dim FileName As String = getfilename
 
 End Class
-
-
-
-
-

@@ -93,24 +93,38 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CreateQuiz.aspx" />
+    <Content Include="AfterQuiz.aspx" />
+    <Content Include="AddQuestions.aspx" />
+    <Content Include="EditExercises.aspx" />
     <Content Include="HomePage-Coach.aspx" />
     <Content Include="Exercises.aspx" />
     <Content Include="HomePage.aspx" />
-    <Content Include="Histologytest.aspx" />
     <Content Include="HomePageLogged-in.aspx" />
     <Content Include="Practice.aspx" />
     <Content Include="Progress.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreateQuiz.aspx.designer.vb">
-      <DependentUpon>CreateQuiz.aspx</DependentUpon>
+    <Compile Include="AfterQuiz.aspx.designer.vb">
+      <DependentUpon>AfterQuiz.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CreateQuiz.aspx.vb">
-      <DependentUpon>CreateQuiz.aspx</DependentUpon>
+    <Compile Include="AfterQuiz.aspx.vb">
+      <DependentUpon>AfterQuiz.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="AddQuestions.aspx.designer.vb">
+      <DependentUpon>AddQuestions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddQuestions.aspx.vb">
+      <DependentUpon>AddQuestions.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="EditExercises.aspx.designer.vb">
+      <DependentUpon>EditExercises.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditExercises.aspx.vb">
+      <DependentUpon>EditExercises.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="HomePage-Coach.aspx.designer.vb">
@@ -132,13 +146,6 @@
     </Compile>
     <Compile Include="HomePage.aspx.vb">
       <DependentUpon>HomePage.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Histologytest.aspx.designer.vb">
-      <DependentUpon>Histologytest.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Histologytest.aspx.vb">
-      <DependentUpon>Histologytest.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="HomePageLogged-in.aspx.designer.vb">
@@ -186,13 +193,6 @@
     </Compile>
     <Compile Include="SignUp.aspx.vb">
       <DependentUpon>SignUp.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.vb">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.vb">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>

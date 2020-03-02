@@ -12,6 +12,12 @@
         .auto-style2 {
             margin-left: 283px;
         }
+        .auto-style3 {
+            width: 456px;
+        }
+        .auto-style4 {
+            font-size: x-large;
+        }
     </style>
 </head>
 <body>
@@ -34,28 +40,23 @@
                 <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
                 <StaticSelectedStyle BackColor="#1C5E55" />
             </asp:Menu>
+                 <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="#663300" NavigateUrl="~/HomePage.aspx">Log Out</asp:HyperLink>
                  </asp:Panel>
             <table class="auto-style1">
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>
-                        <asp:Image ID="Image1" runat="server" CssClass="auto-style2" Height="495px" ImageUrl="https://i.redd.it/3u5a955gu0d01.png" Width="558px" />
+                    <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Image ID="Image1" runat="server" CssClass="auto-style2" Height="300px" ImageUrl="https://crm.usis.me/storage/000001/pictures/faculty/original/8152.jpg" Width="350px" />
                     </td>
-                    <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td><strong>
+                        <asp:Label ID="Label1" runat="server" CssClass="auto-style4" Text="WELCOME, "></asp:Label>
+                        <asp:Label ID="Label2" runat="server" CssClass="auto-style4"></asp:Label>
+                        </strong></td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style3">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
             </table>

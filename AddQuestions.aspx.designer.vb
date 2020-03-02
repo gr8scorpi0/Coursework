@@ -41,6 +41,15 @@ Partial Public Class CreateQuiz
     Protected WithEvents Menu1 As Global.System.Web.UI.WebControls.Menu
 
     '''<summary>
+    '''HyperLink2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents HyperLink2 As Global.System.Web.UI.WebControls.HyperLink
+
+    '''<summary>
     '''SqlDataSource1 control.
     '''</summary>
     '''<remarks>

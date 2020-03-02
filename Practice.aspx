@@ -35,13 +35,14 @@
                    <asp:MenuItem Text="HomePage" Value="HomePage" NavigateUrl="~/HomePage.aspx"></asp:MenuItem>
                     <asp:MenuItem Text="Practice" Value="Practice" NavigateUrl="~/Practice.aspx">
                         <asp:MenuItem Text="Exercises" Value="Exercises" NavigateUrl="~/Exercises.aspx"></asp:MenuItem>
-                        <asp:MenuItem Text="Progress" Value="Progress"></asp:MenuItem>
+                        <asp:MenuItem Text="Progress" Value="Progress" NavigateUrl="~/Progress.aspx"></asp:MenuItem>
                     </asp:MenuItem>
                 </Items>
                 <StaticHoverStyle BackColor="#666666" ForeColor="White" Font-Bold="True" />
                 <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
                 <StaticSelectedStyle BackColor="#1C5E55" />
             </asp:Menu>
+                 <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="#663300" NavigateUrl="~/HomePage.aspx">Log Out</asp:HyperLink>
                  </asp:Panel>
         </div>
         
@@ -51,7 +52,7 @@
                 <tr>
                     <td class="auto-style2">&nbsp;</td>
                     <td>
-                <asp:Button ID="Button1" runat="server" Text="Exercises" BackColor="#FFCC00" BorderColor="#999999" BorderStyle="Double" BorderWidth="10px" CssClass="auto-style3" Font-Bold="False" Font-Names="Malgun Gothic" ForeColor="#666666" PostBackUrl="~/Histologytest.aspx" Width="298px" />
+                <asp:Button ID="Button1" runat="server" Text="Exercises" BackColor="#FFCC00" BorderColor="#999999" BorderStyle="Double" BorderWidth="10px" CssClass="auto-style3" Font-Bold="False" Font-Names="Malgun Gothic" ForeColor="#666666" PostBackUrl="~/Exercises.aspx" Width="298px" />
                     </td>
                     <td>&nbsp;</td>
                 </tr>
