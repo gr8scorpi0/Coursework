@@ -111,6 +111,8 @@
                     <asp:Image ID="Image1" runat="server" Height="317px" Width="441px" />
                 </td>
                 <td class="auto-style4">
+                    <asp:Label ID="Label2" runat="server" Text="Your Current Score is:"></asp:Label>
+                    <br />
                     <asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
                 </td>
             </tr>

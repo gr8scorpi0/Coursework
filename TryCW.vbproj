@@ -95,6 +95,7 @@
   <ItemGroup>
     <Content Include="AfterQuiz.aspx" />
     <Content Include="AddQuestions.aspx" />
+    <Content Include="EditCoach.aspx" />
     <Content Include="EditExercises.aspx" />
     <Content Include="HomePage-Coach.aspx" />
     <Content Include="Exercises.aspx" />
@@ -118,6 +119,13 @@
     </Compile>
     <Compile Include="AddQuestions.aspx.vb">
       <DependentUpon>AddQuestions.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="EditCoach.aspx.designer.vb">
+      <DependentUpon>EditCoach.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditCoach.aspx.vb">
+      <DependentUpon>EditCoach.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="EditExercises.aspx.designer.vb">

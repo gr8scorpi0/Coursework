@@ -19,6 +19,7 @@ Public Class Exercises
             Session("NewQuestion") = "False"
         End If
         Score = Session("Score")
+        Timer1.Enabled = True
 
     End Sub
 
@@ -72,6 +73,7 @@ Public Class Exercises
 
     End Sub
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Timer1.Enabled = False
         If Button1.Text = Session("Answer") Then
             Button1.BackColor = System.Drawing.Color.Green
             Session("Score") = Score + 1
@@ -88,6 +90,7 @@ Public Class Exercises
     End Sub
 
     Protected Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Timer1.Enabled = False
         If Button2.Text = Session("Answer") Then
             Button2.BackColor = System.Drawing.Color.Green
             Session("Score") = Score + 1
@@ -105,7 +108,7 @@ Public Class Exercises
     End Sub
 
     Protected Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-
+        Timer1.Enabled = False
         If Button3.Text = Session("Answer") Then
             Button3.BackColor = System.Drawing.Color.Green
             Session("Score") = Score + 1
@@ -123,6 +126,7 @@ Public Class Exercises
     End Sub
 
     Protected Sub NextQuestion_Button_Click(sender As Object, e As EventArgs) Handles NextQuestion_Button.Click
+        TimeLabel.Text = 15
         Session("NewQuestion") = "True"
         Button1.BackColor = System.Drawing.Color.Gold
         Button2.BackColor = System.Drawing.Color.Gold
@@ -145,7 +149,7 @@ Public Class Exercises
                 Button1.BackColor = System.Drawing.Color.Green
 
             ElseIf Button2.Text = Session("Answer") Then
-                Button2.BackColor = System.Drawing.Color.Red
+                Button2.BackColor = System.Drawing.Color.Green
             ElseIf Button3.Text = Session("Answer") Then
                 Button3.BackColor = System.Drawing.Color.Green
             End If

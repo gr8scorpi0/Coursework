@@ -165,4 +165,13 @@ Partial Public Class CreateQuiz
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Cancel_Button As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''msg_Label control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents msg_Label As Global.System.Web.UI.WebControls.Label
 End Class

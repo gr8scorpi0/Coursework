@@ -26,22 +26,20 @@ Public Class HomePage
 
             Response.Redirect("HomePageLogged-in.aspx") 'Redirects to the HomePage after successful Log-in
 
-
-
         ElseIf dSet.Tables("UserLogins").Rows.Count <> 1 Then 'If it does not match then it will check the CoachLogins table to check if the user is a coach repeating the same process but with different variables
-            Dim con2 As New SqlConnection(ConnectionStrings("SomeeConnectionString").ConnectionString)
-            Dim SQL2 = "SELECT * " &
+
+            SQL = "SELECT * " &
                   "FROM [CoachLogins] " &
                   "WHERE CoachUsername = '" & UsernameTextBox.Text & "'" &
                   "AND Password = '" & PasswordTextBox.Text & "'"
 
             Session("Username") = UsernameTextBox.Text
-            Dim dAdapter2 = New SqlDataAdapter(SQL2, con2)
-            Dim dSet2 = New DataSet
-            dAdapter2.Fill(dSet2, "CoachLogins")
+            dAdapter = New SqlDataAdapter(SQL, con)
+            dSet = New DataSet
+            dAdapter.Fill(dSet, "CoachLogins")
 
 
-            If dSet2.Tables("CoachLogins").Rows.Count = 1 Then
+            If dSet.Tables("CoachLogins").Rows.Count = 1 Then
                 Response.Redirect("HomePage-Coach.aspx") 'If it matches with a row on the table than it redirects to the HomePage dedicated to the Coaches
             Else ' If none of the above is valid then and error message is displayed
                 Label3.Visible = True

@@ -60,8 +60,8 @@
                         <asp:TextBox ID="PasswordTextBox" runat="server" TextMode="Password"></asp:TextBox>
 &nbsp;<br />
                         <br />
-                        <asp:Image ID="Image1" runat="server" Height="59px" ImageUrl="https://img.icons8.com/pastel-glyph/2x/error.png" Width="56px" />
-                        <asp:Label ID="Label3" runat="server" Text="Username or Password format are invalid make sure each section is completed."></asp:Label>
+                        <asp:Image ID="error_Image" runat="server" Height="59px" ImageUrl="https://img.icons8.com/pastel-glyph/2x/error.png" Width="56px" />
+                        <asp:Label ID="error_Label" runat="server"></asp:Label>
                         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         &nbsp;&nbsp;&nbsp;&nbsp;

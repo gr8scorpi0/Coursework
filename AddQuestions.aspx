@@ -39,9 +39,11 @@
                 <DynamicSelectedStyle BackColor="#666666" />
                 <Items>
                    <asp:MenuItem Text="HomePage" Value="HomePage" NavigateUrl="~/HomePage-Coach.aspx"></asp:MenuItem>
-                    <asp:MenuItem Text="Add" Value="Add Questions" NavigateUrl="~/CreateQuiz.aspx">
+                    <asp:MenuItem Text="Exercises" Value="Add Questions" Selectable="False">
+                        <asp:MenuItem NavigateUrl="~/AddQuestions.aspx" Text="Add" Value="Add"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/EditExercises.aspx" Text="Edit" Value="Edit"></asp:MenuItem>
                     </asp:MenuItem>
-                    <asp:MenuItem NavigateUrl="~/EditExercises.aspx" Text="Edit" Value="Edit Questions"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/EditCoach.aspx" Text="Edit Coach" Value="Edit Questions"></asp:MenuItem>
                 </Items>
                 <StaticHoverStyle BackColor="#666666" ForeColor="White" Font-Bold="True" />
                 <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
@@ -108,6 +110,7 @@
                         &nbsp;&nbsp;&nbsp;
                         <asp:Button ID="Cancel_Button" runat="server" Text="Cancel" />
                     </asp:Panel>
+                    <asp:Label ID="msg_Label" runat="server"></asp:Label>
                 </td>
             </tr>
         </table>

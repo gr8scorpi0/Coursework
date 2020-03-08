@@ -8,21 +8,17 @@ Public Class CreateQuiz
         If Session.Item("Username") Is Nothing Then
             Response.Redirect("Homepage.aspx")
         End If
-    End Sub
-
-    Protected Sub Answer_TextBox_TextChanged(sender As Object, e As EventArgs) Handles Answer_TextBox.TextChanged
-
+        msg_Label.Visible = False
     End Sub
 
     Protected Sub Submit_Button_Click(sender As Object, e As EventArgs) Handles Submit_Button.Click
 
 
-        If Answer_TextBox.Text.Length < 0 Then
+        If Answer_TextBox.Text.Length <= 0 Then
             MsgBox("Fill the Answer Field")
-        ElseIf Link_TextBox.Text.Length < 0 Then
+        ElseIf Link_TextBox.Text.Length <= 0 Then
             MsgBox("Fill the Image URL Field")
         Else
-
 
             Dim Link = Link_TextBox.Text
             Dim FinalLink As String
@@ -49,7 +45,8 @@ Public Class CreateQuiz
                 con.Open()
                 cmd.ExecuteNonQuery()
                 con.Close()
-                MsgBox(" Upload Successful!")
+                msg_Label.Visible = False
+                msg_Label.Text = " Upload Successful!"
 
 
             End If
@@ -57,6 +54,8 @@ Public Class CreateQuiz
     End Sub
 
     Protected Sub Cancel_Button_Click(sender As Object, e As EventArgs) Handles Cancel_Button.Click
+        Answer_TextBox.Text = ""
+        Link_TextBox.Text = ""
 
     End Sub
 
