@@ -48,4 +48,22 @@ Partial Public Class AfterQuiz
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Score_Label As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Progress_Button control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Progress_Button As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Quiz_Button control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Quiz_Button As Global.System.Web.UI.WebControls.Button
 End Class

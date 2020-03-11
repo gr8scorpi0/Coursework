@@ -50,6 +50,33 @@ Partial Public Class EditExercises
     Protected WithEvents HyperLink1 As Global.System.Web.UI.WebControls.HyperLink
 
     '''<summary>
+    '''search_TextBox control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents search_TextBox As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''search_Button control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents search_Button As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''ScriptManager1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
+
+    '''<summary>
     '''GridView1 control.
     '''</summary>
     '''<remarks>

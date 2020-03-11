@@ -31,6 +31,11 @@
                  </asp:Panel>
         </div>
         <br />
+        <asp:TextBox ID="search_TextBox" runat="server"></asp:TextBox>
+        &nbsp;
+        <asp:Button ID="search_Button" runat="server" Text="Search" />
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
             <Columns>
                 <asp:BoundField DataField="Answer" HeaderText="Answer" SortExpression="Answer" />
@@ -38,6 +43,7 @@
                 <asp:BoundField DataField="QuestionID" HeaderText="QuestionID" InsertVisible="False" ReadOnly="True" SortExpression="QuestionID" />
             </Columns>
         </asp:GridView>
+        <br />
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SomeeConnectionString %>" SelectCommand="SELECT * FROM [AddQuestions]"></asp:SqlDataSource>
         <br />
         <asp:Label ID="Label4" runat="server" Text="Complete according to what you wish to change. QuestionID MUST be included."></asp:Label>

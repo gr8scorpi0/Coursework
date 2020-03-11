@@ -18,6 +18,10 @@
         }
         .auto-style4 {
             width: 319px;
+            height: 89px;
+        }
+        .auto-style5 {
+            height: 89px;
         }
     </style>
 </head>
@@ -31,7 +35,7 @@
                     <DynamicMenuStyle BackColor="#FFCC00" />
                     <DynamicSelectedStyle BackColor="#666666" />
                     <Items>
-                        <asp:MenuItem Text="HomePage" Value="HomePage" NavigateUrl="~/HomePage.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="HomePage" Value="HomePage" NavigateUrl="~/HomePageLogged-in.aspx"></asp:MenuItem>
                         <asp:MenuItem Text="Practice" Value="Practice" NavigateUrl="~/Practice.aspx">
                             <asp:MenuItem Text="Exercises" Value="Exercises" NavigateUrl="~/Exercises.aspx"></asp:MenuItem>
                             <asp:MenuItem Text="Progress" Value="Progress" NavigateUrl="~/Progress.aspx"></asp:MenuItem>
@@ -45,14 +49,21 @@
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style3"></td>
-                    <td rowspan="2">You Scored:<br />
-                        <asp:Label ID="Score_Label" runat="server" BackColor="#CCCCCC" BorderColor="#009933" BorderStyle="Groove" Height="103px" Text="Label" Width="117px"></asp:Label>
+                    <td rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You Scored:<br />
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Label ID="Score_Label" runat="server" BackColor="#CCCCCC" BorderColor="#009933" BorderStyle="Groove" Height="311px" Text="Label" Width="347px"></asp:Label>
+                        <br />
+                        <br />
+                        <asp:Button ID="Progress_Button" runat="server" BackColor="#FFCC00" BorderStyle="Dotted" ForeColor="White" Height="85px" PostBackUrl="~/Progress.aspx" Text="See Progress" Width="340px" />
+&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="Quiz_Button" runat="server" BackColor="#336600" BorderColor="#FFCC00" BorderStyle="Dotted" ForeColor="White" Height="87px" PostBackUrl="~/Exercises.aspx" Text="New Quiz" Width="309px" />
                     </td>
                     <td class="auto-style2"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style4">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style4"></td>
+                    <td class="auto-style5"></td>
                 </tr>
             </table>
         </div>

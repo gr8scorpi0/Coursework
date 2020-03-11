@@ -57,3 +57,7 @@ C:\Users\telma\source\repos\TryCW\TryCW\obj\Debug\TryCW.vbproj.CopyComplete
 C:\Users\telma\source\repos\TryCW\TryCW\obj\Debug\TryCW.dll
 C:\Users\telma\source\repos\TryCW\TryCW\obj\Debug\TryCW.xml
 C:\Users\telma\source\repos\TryCW\TryCW\obj\Debug\TryCW.pdb
+C:\Users\telma\source\repos\TryCW\TryCW\bin\EntityFramework.dll
+C:\Users\telma\source\repos\TryCW\TryCW\bin\EntityFramework.SqlServer.dll
+C:\Users\telma\source\repos\TryCW\TryCW\bin\EntityFramework.xml
+C:\Users\telma\source\repos\TryCW\TryCW\bin\EntityFramework.SqlServer.xml

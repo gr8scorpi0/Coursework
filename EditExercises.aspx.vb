@@ -2,6 +2,7 @@
 Imports System.Configuration.ConfigurationManager       ' ConnectionStrings
 Public Class EditExercises
     Inherits System.Web.UI.Page
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Session.Item("Username") Is Nothing Then
             Response.Redirect("Homepage.aspx")
@@ -10,6 +11,7 @@ Public Class EditExercises
         done_Label.Visible = False
         done_Image.Visible = False
         error_Image.Visible = False
+
     End Sub
 
     Protected Sub ImageURL_Button_Click(sender As Object, e As EventArgs) Handles ImageURL_Button.Click
@@ -39,7 +41,6 @@ Public Class EditExercises
 
                 FinalLink = Link.Substring(start, length)
 
-
                 Dim con As New SqlConnection(ConnectionStrings("SomeeConnectionString").ConnectionString)
 
                 Dim SQL As String = "UPDATE [AddQuestions] " &
@@ -47,12 +48,10 @@ Public Class EditExercises
                     "WHERE QuestionID = '" & QID_TextBox.Text & "'"
                 Dim cmd As New SqlCommand(SQL, con)
 
-
                 con.Open()
                 cmd.ExecuteNonQuery()
                 con.Close()
                 MsgBox(" Change was made Successfully!")
-
 
             End If
         End If
@@ -88,6 +87,16 @@ Public Class EditExercises
             done_Label.Text = (" Change was made Successfully!")
         End If
     End Sub
+
+    Protected Sub search_Button_Click(sender As Object, e As EventArgs) Handles search_Button.Click
+        Dim con As New SqlConnection(ConnectionStrings("SomeeConnectionString").ConnectionString)
+
+        Dim sql = "SELECT * FROM [AddQuestions] " &
+                    "WHERE CONCAT (ImageLink, Answer, QuestionID) LIKE '%" & search_TextBox.Text & "%'"
+        SqlDataSource1.SelectCommand = sql
+
+    End Sub
+
 
 
 End Class

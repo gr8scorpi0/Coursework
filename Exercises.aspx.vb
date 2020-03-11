@@ -136,6 +136,7 @@ Public Class Exercises
 
     Protected Sub Exit_Button_Click(sender As Object, e As EventArgs) Handles Exit_Button.Click
         StoreScores()
+        Response.Redirect("AfterQuiz.aspx")
     End Sub
 
     Protected Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick

@@ -73,6 +73,24 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:TryCW.AfterQuiz._Progress_Button">
+<summary>
+Progress_Button control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TryCW.AfterQuiz._Quiz_Button">
+<summary>
+Quiz_Button control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:TryCW.CreateQuiz._form1">
 <summary>
 form1 control.
@@ -418,6 +436,33 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:TryCW.EditExercises._HyperLink1">
 <summary>
 HyperLink1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TryCW.EditExercises._search_TextBox">
+<summary>
+search_TextBox control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TryCW.EditExercises._search_Button">
+<summary>
+search_Button control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:TryCW.EditExercises._ScriptManager1">
+<summary>
+ScriptManager1 control.
 </summary>
 <remarks>
 Auto-generated field.

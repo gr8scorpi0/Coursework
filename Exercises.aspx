@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Excersises</title>
+    <title>Excercises</title>
     <style type="text/css">
         .auto-style1 {
             width: 100%;
@@ -133,7 +133,7 @@
                 <td class="auto-style8">
                     &nbsp;</td>
                 <td class="auto-style9">
-                    <asp:Button ID="Exit_Button" runat="server" BackColor="#CC0000" ForeColor="White" Height="48px" Text="Exit" Width="150px" />
+                    <asp:Button ID="Exit_Button" runat="server" BackColor="#CC0000" ForeColor="White" Height="48px" Text="Exit" Width="150px" PostBackUrl="~/AfterQuiz.aspx" />
                 </td>
             </tr>
         </table>
