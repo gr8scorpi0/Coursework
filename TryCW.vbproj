@@ -112,7 +112,9 @@
     <Content Include="Practice.aspx" />
     <Content Include="Progress.aspx" />
     <Content Include="SignUp.aspx" />
+    <Content Include="TryChart.aspx" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AfterQuiz.aspx.designer.vb">
@@ -209,6 +211,20 @@
     </Compile>
     <Compile Include="SignUp.aspx.vb">
       <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TryChart.aspx.designer.vb">
+      <DependentUpon>TryChart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TryChart.aspx.vb">
+      <DependentUpon>TryChart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
