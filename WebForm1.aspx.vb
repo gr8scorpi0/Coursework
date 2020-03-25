@@ -32,8 +32,10 @@ Public Class WebForm1
 
         Dim testno As Integer
         Dim rowcount As Integer
-        ' Dim rows As Integer
-        ' rows = ds.Tables("CountRows").Rows(rowcount).Item("QuizScores")
+        testno = testno + 1
+        rowcount = +1
+        Dim rows As Integer
+        rows = ds.Tables("CountRows").Rows(rowcount).Item("QuizScores")
 
         For rowcount = 0 To rowcount = +1
 

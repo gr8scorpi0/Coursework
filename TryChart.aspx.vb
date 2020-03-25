@@ -27,7 +27,6 @@ Public Class TryChart
         Dim cmd2 As New SqlCommand(SQL2, con)
         Dim da2 = New SqlDataAdapter(SQL2, con)
         Dim ds2 As New DataSet
-
         da2.Fill(ds2, "CountRows")
         con.Open()
         cmd2.ExecuteNonQuery()
@@ -35,44 +34,50 @@ Public Class TryChart
 
         Label2.Text = ds2.Tables("CountRows").Rows(0).Item(0) 'Number of rows
         Dim rowcount As Integer
-        rowcount = Label2.Text - 1
+        rowcount = Label2.Text - 1 'because it starts at 0
 
 
 
         For rowcount = 0 To rowcount = rowcount + 1
-            Dim testno As Integer = 0
-            testno = testno + 1
-            For testno = 0 To testno
+
+            While rowcount < ds.Tables(0).Rows.Count - 1
+
+
+
                 Page.Response.ContentType = "image/png"
-                Dim Canva As Bitmap = New Bitmap(505, 505)
-                Dim shape As Graphics = Graphics.FromImage(Canva)
-                Dim testscore As Integer
+            Dim Canva As Bitmap = New Bitmap(505, 505, System.Drawing.Imaging.PixelFormat.Format24bppRgb)
+            Dim shape As Graphics = Graphics.FromImage(Canva)
+            Dim testscore As Integer
+            testscore = ds.Tables("TrackScore").Rows(rowcount).Item("QuizScore") 'Gets the score from the table
 
-                testscore = ds.Tables("TrackScore").Rows(rowcount).Item("QuizScore") 'Gets the score from the table
+            Dim testno As Integer = 1
+
+            Dim height As Integer = 100 * testscore
+            Dim top As Integer = 505 - height
+            Dim x As Integer = (testno - 1) * 100
+            'bar
+            shape.FillRectangle(Brushes.Goldenrod, x, top, 100, height + 100)
+
+            'axis
+            shape.FillRectangle(Brushes.White, 0, 0, 5, 500)
+            shape.FillRectangle(Brushes.White, 0, 500, 500, 5)
+
+            'text w/ score
+            Dim font As New Font("ariel", 24)
+            shape.DrawString(testscore, font, Brushes.White, x + 35, top)
+            Canva.Save(Response.OutputStream, ImageFormat.Png)
 
 
 
-                Dim height As Integer = 100 * testscore
-                Dim top As Integer = 505 - height
-                Dim x As Integer = (testno - 1) * 100
-                'bar
-                shape.FillRectangle(Brushes.Goldenrod, x, top, 100, height + 100)
-                shape.FillRectangle(Brushes.White, 0, 500, 500, 5)
-                'axis
-                shape.FillRectangle(Brushes.White, 0, 0, 5, 500)
+            ' Label1.Text = ds.Tables("TrackScore").Rows(rowcount).Item("QuizScore")
 
-                'text w/ score
-                Dim font As New Font("ariel", 24)
-                shape.DrawString(testscore, font, Brushes.White, x + 35, top)
-                Canva.Save(Response.OutputStream, ImageFormat.Png)
+            Canva.Dispose()
+            shape.Dispose()
 
-                Canva.Dispose()
-                shape.Dispose()
-
-                Label1.Text = ds.Tables("TrackScore").Rows(rowcount).Item("QuizScore")
-
-            Next
+                testno = +1
+            End While
         Next
+
     End Sub
 
 
