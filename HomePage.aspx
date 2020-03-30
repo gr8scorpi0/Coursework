@@ -12,9 +12,12 @@
         .auto-style2 {
             width: 306px;
         }
+        .auto-style3 {
+            color: #FFFFFF;
+        }
     </style>
 </head>
-<body>
+<body style="background: #c9dcea">
     <form id="form1" runat="server">
         <div>
             <asp:Panel ID="Panel1" runat="server" BackColor="#FFCC00">
@@ -67,12 +70,13 @@
             <tr>
                 <td class="auto-style2">&nbsp;</td>
                 <td>
-        <asp:Label ID="Label3" runat="server" Visible="False"></asp:Label>
+        <asp:Image ID="error_Image" runat="server" Height="62px" ImageUrl="https://img.icons8.com/pastel-glyph/2x/error.png" Width="64px" />
+        &nbsp;<asp:Label ID="Error_Label" runat="server" Visible="False"></asp:Label>
                 </td>
             </tr>
         </table>
         <p>
-            <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="#FF9900" NavigateUrl="~/SignUp.aspx">Don&#39;t have an account? Sign Up Here</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="#FF9900" NavigateUrl="~/SignUp.aspx" BorderColor="White" BorderStyle="Solid" CssClass="auto-style3">Don&#39;t have an account? Sign Up Here</asp:HyperLink>
         </p>
         <p style="text-align: left">
             &nbsp;</p>

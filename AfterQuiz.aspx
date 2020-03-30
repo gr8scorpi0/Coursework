@@ -23,9 +23,12 @@
         .auto-style5 {
             height: 89px;
         }
+        .auto-style6 {
+            font-size: xx-large;
+        }
     </style>
 </head>
-<body>
+<body style="background: #c9dcea">
     <form id="form1" runat="server">
         <div>
             <asp:Panel ID="Panel1" runat="server" BackColor="#FFCC00">
@@ -52,12 +55,12 @@
                     <td rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You Scored:<br />
                         <br />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="Score_Label" runat="server" BackColor="#CCCCCC" BorderColor="#009933" BorderStyle="Groove" Height="311px" Text="Label" Width="347px"></asp:Label>
+                        <asp:Label ID="Score_Label" runat="server" BackColor="#CCCCCC" BorderColor="#009933" BorderStyle="Groove" Height="115px" Text="Label" Width="347px" CssClass="auto-style6"></asp:Label>
                         <br />
                         <br />
                         <asp:Button ID="Progress_Button" runat="server" BackColor="#FFCC00" BorderStyle="Dotted" ForeColor="White" Height="85px" PostBackUrl="~/Progress.aspx" Text="See Progress" Width="340px" />
 &nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="Quiz_Button" runat="server" BackColor="#336600" BorderColor="#FFCC00" BorderStyle="Dotted" ForeColor="White" Height="87px" PostBackUrl="~/Exercises.aspx" Text="New Quiz" Width="309px" />
+                        <asp:Button ID="Quiz_Button" runat="server" BackColor="#336600" BorderColor="#FFCC00" BorderStyle="Dotted" ForeColor="White" Height="87px" Text="New Quiz" Width="309px" />
                     </td>
                     <td class="auto-style2"></td>
                 </tr>

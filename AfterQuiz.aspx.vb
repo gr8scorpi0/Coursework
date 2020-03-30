@@ -6,11 +6,12 @@
             Response.Redirect("Homepage.aspx")
         End If
         Score_Label.Text = Session("Score")
-
+        Session("NewQuestion") = "True"
     End Sub
 
     Protected Sub Quiz_Button_Click(sender As Object, e As EventArgs) Handles Quiz_Button.Click
         Session("NewQuestion") = "True"
         Session("score") = 0
+        Response.Redirect("Exercises.aspx")
     End Sub
 End Class

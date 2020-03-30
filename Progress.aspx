@@ -7,8 +7,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            text-align: center;
+        }
+    </style>
 </head>
-<body>
+<body  style="background: #c9dcea">
     <form id="form1" runat="server">
         <div>
             <asp:Panel ID="Panel1" runat="server" BackColor="#FFCC00">
@@ -31,21 +39,32 @@
                  <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="#663300" NavigateUrl="~/HomePage.aspx">Log Out</asp:HyperLink>
                  </asp:Panel>
         </div>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SomeeConnectionString %>" SelectCommand="SELECT * FROM [TrackScore] WHERE ([Username] = @Username)">
-            <SelectParameters>
-                <asp:SessionParameter Name="Username" SessionField="Username" Type="String" />
-            </SelectParameters>
-        </asp:SqlDataSource>
-        <asp:Chart ID="Chart1" runat="server" DataSourceID="SqlDataSource1">
-            <series>
-                <asp:Series Name="Series1" XValueMember="Date" YValueMembers="QuizScore">
-                </asp:Series>
-            </series>
-            <chartareas>
-                <asp:ChartArea Name="ChartArea1">
-                </asp:ChartArea>
-            </chartareas>
-        </asp:Chart>
+        <table class="auto-style1">
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style2" colspan="2" rowspan="2">
+                    <asp:Button ID="Button1" runat="server" PostBackUrl="~/ProgressGraph.aspx" Text="SEE GRAPH" />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style2" colspan="2">
+                    <asp:Label ID="Label1" runat="server" Text="To get back to this page just press the back arrow."></asp:Label>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
     </form>
 </body>
 </html>

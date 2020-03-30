@@ -6,7 +6,7 @@
 <head runat="server">
     <title></title>
 </head>
-<body>
+<body style="background: #808080">
     <form id="form1" runat="server">
         <div>
             <asp:Panel ID="Panel1" runat="server" BackColor="#CADBD9">
@@ -30,7 +30,6 @@
                  <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="#663300" NavigateUrl="~/HomePage.aspx">Log Out</asp:HyperLink>
                  </asp:Panel>
         </div>
-        <asp:Label ID="Label1" runat="server" Text="COACH"></asp:Label>
     </form>
 </body>
 </html>

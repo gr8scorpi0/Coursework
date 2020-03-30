@@ -6,7 +6,7 @@
 <head runat="server">
     <title></title>
 </head>
-<body>
+<body style="background: #808080">
     <form id="form1" runat="server">
         <div>
             <asp:Panel ID="Panel1" runat="server" BackColor="#CADBD9">
@@ -34,41 +34,52 @@
         <asp:TextBox ID="search_TextBox" runat="server"></asp:TextBox>
         &nbsp;
         <asp:Button ID="search_Button" runat="server" Text="Search" />
+        <br />
         <asp:ScriptManager ID="ScriptManager1" runat="server">
         </asp:ScriptManager>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
+            <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField DataField="Answer" HeaderText="Answer" SortExpression="Answer" />
                 <asp:BoundField DataField="ImageLink" HeaderText="ImageLink" SortExpression="ImageLink" />
                 <asp:BoundField DataField="QuestionID" HeaderText="QuestionID" InsertVisible="False" ReadOnly="True" SortExpression="QuestionID" />
             </Columns>
+            <FooterStyle BackColor="#CCCC99" />
+            <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+            <RowStyle BackColor="#F7F7DE" />
+            <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#FBFBF2" />
+            <SortedAscendingHeaderStyle BackColor="#848384" />
+            <SortedDescendingCellStyle BackColor="#EAEAD3" />
+            <SortedDescendingHeaderStyle BackColor="#575357" />
         </asp:GridView>
         <br />
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SomeeConnectionString %>" SelectCommand="SELECT * FROM [AddQuestions]"></asp:SqlDataSource>
         <br />
-        <asp:Label ID="Label4" runat="server" Text="Complete according to what you wish to change. QuestionID MUST be included."></asp:Label>
+        <asp:Label ID="Label4" runat="server" Text="Complete according to what you wish to change. QuestionID MUST be included." ForeColor="White"></asp:Label>
         <br />
         <br />
-        <asp:Label ID="Label3" runat="server" Text="QuestionID:"></asp:Label>
+        <asp:Label ID="Label3" runat="server" Text="QuestionID:" ForeColor="White"></asp:Label>
 &nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="QID_TextBox" runat="server"></asp:TextBox>
         <br />
         <br />
-        <asp:Label ID="Label1" runat="server" Text="ImageURL:"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text="ImageURL:" ForeColor="White"></asp:Label>
 &nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="ImageURL_TextBox" runat="server"></asp:TextBox>
         <br />
         <br />
-        <asp:Label ID="Label2" runat="server" Text="Answer"></asp:Label>
+        <asp:Label ID="Label2" runat="server" Text="Answer:" ForeColor="White"></asp:Label>
 &nbsp;&nbsp;&nbsp;
         <asp:TextBox ID="Answer_TextBox" runat="server"></asp:TextBox>
         <br />
         <br />
         <asp:Image ID="error_Image" runat="server" Height="62px" ImageUrl="https://img.icons8.com/pastel-glyph/2x/error.png" Width="64px" />
-        <asp:Label ID="Error_Label" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="Error_Label" runat="server" Text="Label" ForeColor="White"></asp:Label>
         <br />
         <asp:Image ID="done_Image" runat="server" Height="50px" ImageUrl="https://pngimage.net/wp-content/uploads/2018/05/done-icon-png-8.png" Width="46px" />
-        <asp:Label ID="done_Label" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="done_Label" runat="server" Text="Label" ForeColor="White"></asp:Label>
         <br />
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;

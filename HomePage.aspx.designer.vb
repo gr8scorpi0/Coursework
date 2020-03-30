@@ -95,13 +95,22 @@ Partial Public Class HomePage
     Protected WithEvents SqlDataSource1 As Global.System.Web.UI.WebControls.SqlDataSource
 
     '''<summary>
-    '''Label3 control.
+    '''error_Image control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents error_Image As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
+    '''Error_Label control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Error_Label As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''HyperLink1 control.

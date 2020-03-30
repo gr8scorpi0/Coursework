@@ -167,6 +167,24 @@ Partial Public Class CreateQuiz
     Protected WithEvents Cancel_Button As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''done_Image control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents done_Image As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
+    '''error_Image control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents error_Image As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
     '''msg_Label control.
     '''</summary>
     '''<remarks>

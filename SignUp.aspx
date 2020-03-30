@@ -17,7 +17,7 @@
         }
     </style>
 </head>
-<body>
+<body style="background: #c9dcea">
     <form id="form1" runat="server">
         <div>
             <asp:Panel ID="Panel1" runat="server" BackColor="#FFCC00">

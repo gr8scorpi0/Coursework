@@ -5,7 +5,8 @@ Public Class HomePage
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        Label3.Visible = False
+        Error_Label.Visible = False
+        error_Image.Visible = False
     End Sub
 
     Protected Sub LoginButton_Click(sender As Object, e As EventArgs) Handles LoginButton.Click
@@ -42,8 +43,9 @@ Public Class HomePage
             If dSet.Tables("CoachLogins").Rows.Count = 1 Then
                 Response.Redirect("HomePage-Coach.aspx") 'If it matches with a row on the table than it redirects to the HomePage dedicated to the Coaches
             Else ' If none of the above is valid then and error message is displayed
-                Label3.Visible = True
-                Label3.Text = "Incorrect Password or Username"
+                error_Image.Visible = True
+                Error_Label.Visible = True
+                Error_Label.Text = "Incorrect Password or Username"
             End If
 
 

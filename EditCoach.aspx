@@ -6,7 +6,7 @@
 <head runat="server">
     <title>Dulce</title>
 </head>
-<body>
+<body style="background: #808080">
     <form id="form1" runat="server">
         <div>
             <asp:Panel ID="Panel1" runat="server" BackColor="#CADBD9">

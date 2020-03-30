@@ -11,12 +11,9 @@
         }
         .auto-style2 {
             width: 343px;
-        }
+        } 
         .auto-style3 {
             width: 343px;
-            height: 407px;
-        }
-        .auto-style4 {
             height: 407px;
         }
         .auto-style5 {
@@ -31,12 +28,6 @@
             width: 290px;
             height: 30px;
         }
-        .auto-style9 {
-            height: 30px;
-        }
-        .auto-style11 {
-            height: 145px;
-        }
         .auto-style12 {
             width: 343px;
             height: 145px;
@@ -45,9 +36,27 @@
             width: 343px;
             height: 30px;
         }
+        .auto-style14 {
+            background-color: #FFFF00;
+        }
+        .auto-style15 {
+            width: 606px;
+            height: 145px;
+        }
+        .auto-style16 {
+            width: 606px;
+        }
+        .auto-style17 {
+            width: 606px;
+            height: 407px;
+        }
+        .auto-style18 {
+            width: 606px;
+            height: 30px;
+        }
         </style>
 </head>
-<body>
+<body style="background: #c9dcea">
     <form id="form1" runat="server">
          <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
@@ -59,7 +68,7 @@
                 <DynamicMenuStyle BackColor="#FFCC00" />
                 <DynamicSelectedStyle BackColor="#666666" />
                 <Items>
-                   <asp:MenuItem Text="HomePage" Value="HomePage" NavigateUrl="~/HomePage.aspx"></asp:MenuItem>
+                   <asp:MenuItem Text="HomePage" Value="HomePage" NavigateUrl="~/HomePageLogged-in.aspx"></asp:MenuItem>
                     <asp:MenuItem Text="Practice" Value="Practice" NavigateUrl="~/Practice.aspx">
                         <asp:MenuItem Text="Exercises" Value="Exercises" NavigateUrl="~/Exercises.aspx"></asp:MenuItem>
                         <asp:MenuItem Text="Progress" Value="Progress" NavigateUrl="~/Progress.aspx"></asp:MenuItem>
@@ -76,9 +85,13 @@
          
         &nbsp;<table class="auto-style1">
             <tr>
-                <td class="auto-style12"></td>
+                <td class="auto-style12">
+                    <asp:Label ID="Label2" runat="server" Text="Your Current Score is:"></asp:Label>
+                    <br />
+                    <asp:Label ID="Score_Label" runat="server" Text="Label" Visible="False" CssClass="auto-style14"></asp:Label>
+                </td>
                 <td class="auto-style5">State the name of the problem in the cell.</td>
-                <td class="auto-style11">
+                <td class="auto-style15">
                     <asp:Label ID="TimetxtLabel" runat="server" Text="Time Left:"></asp:Label>
                  
 
@@ -87,7 +100,7 @@
                         <ContentTemplate>
                             <asp:Timer ID="Timer1" runat="server" Interval="1000">
                             </asp:Timer>
-                            <asp:Label ID="TimeLabel" runat="server" Text="15"></asp:Label>
+                            <asp:Label ID="TimeLabel" runat="server" Text="15" CssClass="auto-style14"></asp:Label>
                             &nbsp;
                         </ContentTemplate>
                     </asp:UpdatePanel>
@@ -96,24 +109,27 @@
             <tr>
                 <td class="auto-style2">&nbsp;</td>
                 <td class="auto-style6" rowspan="2">
-                    <asp:Button ID="Button1" runat="server" Text="Button" Width="300px" BackColor="#FFCC00" />
                     <br />
-                    <br />
-                    <asp:Button ID="Button2" runat="server" Text="Button" Width="300px" BackColor="#FFCC00" />
-                    <br />
-                    <br />
-                    <asp:Button ID="Button3" runat="server" Text="Button" Width="300px" BackColor="#FFCC00" />
+                    <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                        <ContentTemplate>
+                            <asp:Button ID="Button1" runat="server" BackColor="#FFCC00" Text="Button" Width="300px" />
+                            <br />
+                            <br />
+                            <asp:Button ID="Button2" runat="server" BackColor="#FFCC00" Text="Button" Width="300px" />
+                            <br />
+                            <br />
+                            <asp:Button ID="Button3" runat="server" BackColor="#FFCC00" Text="Button" Width="300px" />
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
                 </td>
-                <td>&nbsp;</td>
+                <td class="auto-style16">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style3">
                     <asp:Image ID="Image1" runat="server" Height="317px" Width="441px" />
                 </td>
-                <td class="auto-style4">
-                    <asp:Label ID="Label2" runat="server" Text="Your Current Score is:"></asp:Label>
+                <td class="auto-style17">
                     <br />
-                    <asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
                 </td>
             </tr>
             <tr>
@@ -123,7 +139,7 @@
                 </td>
                 <td class="auto-style8">
                     &nbsp;</td>
-                <td class="auto-style9">
+                <td class="auto-style18">
                     <asp:Button ID="NextQuestion_Button" runat="server" Text="Next Question" BackColor="#99CC00" ForeColor="White" Height="48px" Width="150px" />
                 </td>
             </tr>
@@ -132,8 +148,8 @@
                     &nbsp;</td>
                 <td class="auto-style8">
                     &nbsp;</td>
-                <td class="auto-style9">
-                    <asp:Button ID="Exit_Button" runat="server" BackColor="#CC0000" ForeColor="White" Height="48px" Text="Exit" Width="150px" PostBackUrl="~/AfterQuiz.aspx" />
+                <td class="auto-style18">
+                    <asp:Button ID="Exit_Button" runat="server" BackColor="#CC0000" ForeColor="White" Height="48px" Text="Exit" Width="150px" />
                 </td>
             </tr>
         </table>

@@ -6,6 +6,8 @@ Public Class Progress
         If Session.Item("Username") Is Nothing Then
             Response.Redirect("Homepage.aspx")
         End If
+        Session("NewQuestion") = "True"
     End Sub
+
 
 End Class

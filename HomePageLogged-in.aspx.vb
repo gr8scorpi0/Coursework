@@ -5,8 +5,8 @@
         If Session.Item("Username") Is Nothing Then
             Response.Redirect("Homepage.aspx")
         Else
-            Label2.Text = Session("Username")
-            Label2.Visible = True
+            Username_Label.Text = Session("Username")
+            Username_Label.Visible = True
         End If
     End Sub
 

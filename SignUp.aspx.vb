@@ -22,7 +22,10 @@ Public Class SignUp
             error_Label.Visible = True
             error_Image.Visible = True
             error_Label.Text = "Username or Password format are invalid make sure each section is completed."
-
+        ElseIf PasswordTextBox.Text.Length < 8 Then
+            error_Label.Visible = True
+            error_Image.Visible = True
+            error_Label.Text = "Password needs to have at least 8 characters."
         ElseIf dSet.Tables("UserLogins").Rows.Count = 1 Then
             error_Label.Visible = True
             error_Label.Text = "Username already exists"

@@ -13,14 +13,19 @@
             margin-left: 283px;
         }
         .auto-style3 {
-            width: 456px;
+            width: 301px;
         }
         .auto-style4 {
             font-size: x-large;
+            color: #000000;
+            background-color: #FFFFFF;
+        }
+        .auto-style5 {
+            text-align: center;
         }
     </style>
 </head>
-<body>
+<body style="background: #c9dcea">
     <form id="form1" runat="server">
         <div>
             <asp:Panel ID="Panel1" runat="server" BackColor="#FFCC00">
@@ -44,20 +49,23 @@
                  </asp:Panel>
             <table class="auto-style1">
                 <tr>
-                    <td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <td colspan="2" class="auto-style5">&nbsp;&nbsp;&nbsp;
                         <asp:Image ID="Image1" runat="server" CssClass="auto-style2" Height="300px" ImageUrl="https://crm.usis.me/storage/000001/pictures/faculty/original/8152.jpg" Width="350px" />
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
-                    <td><strong>
+                    <td class="auto-style5"><strong>
                         <asp:Label ID="Label1" runat="server" CssClass="auto-style4" Text="WELCOME, "></asp:Label>
-                        <asp:Label ID="Label2" runat="server" CssClass="auto-style4"></asp:Label>
+                        <asp:Label ID="Username_Label" runat="server" CssClass="auto-style4"></asp:Label>
                         </strong></td>
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style5">Welcome to this online study helper. Here you may find Questions uploaded by Coaches from your and different years.<br />
+                        This website was created to help you practice for the exams on Histology.<br />
+                        Plus you may find the scores you have achieved on the progress page.<br />
+                        Enjoy!!</td>
                 </tr>
             </table>
         </div>
