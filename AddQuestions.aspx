@@ -26,9 +26,17 @@
             width: 100%;
             height: 206px;
         }
+        .auto-style7 {
+            color: #FFFFFF;
+        }
+        .auto-style8 {
+            font-size: large;
+            font-family: "Times New Roman", Times, serif;
+            color: #FFFFFF;
+        }
     </style>
 </head>
-<body>
+<body style="background: #808080">
     <form id="form1" runat="server">
         <div>
                 <asp:Panel ID="Panel1" runat="server" BackColor="#CADBD9">
@@ -58,10 +66,10 @@
         <br />
         <table class="auto-style2">
             <tr>
-                <td class="auto-style4" colspan="2"><span class="auto-style5">To Upload an image visit
+                <td class="auto-style4" colspan="2"><span class="auto-style8">To Upload an image visit
                     </span>
                     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="https://pt.imgbb.com/" CssClass="auto-style5" ForeColor="#CADBD9" Target="_search">this website</asp:HyperLink>
-                    <span class="auto-style5">&nbsp;and follow the instructions below.<br />
+                    <span class="auto-style5">&nbsp;<span class="auto-style7">and follow the instructions below.</span><br />
                     <br />
                     <br />
                     </span></td>
@@ -89,7 +97,7 @@
         <br />
         <table class="auto-style6">
             <tr>
-                <td>
+                <td class="auto-style4">
                     <asp:Panel ID="Panel3" runat="server" BackColor="#CADBD9" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="15px" CssClass="auto-style1" Height="340px" HorizontalAlign="Center" Width="619px">
                         <br />
                         <asp:Label ID="Label3" runat="server" Text="Answer:"></asp:Label>
@@ -110,7 +118,9 @@
                         &nbsp;&nbsp;&nbsp;
                         <asp:Button ID="Cancel_Button" runat="server" Text="Cancel" />
                     </asp:Panel>
-                    <asp:Label ID="msg_Label" runat="server"></asp:Label>
+        <asp:Image ID="done_Image" runat="server" Height="50px" ImageUrl="https://pngimage.net/wp-content/uploads/2018/05/done-icon-png-8.png" Width="46px" />
+        <asp:Image ID="error_Image" runat="server" Height="62px" ImageUrl="https://img.icons8.com/pastel-glyph/2x/error.png" Width="64px" />
+                    <asp:Label ID="msg_Label" runat="server" ForeColor="White"></asp:Label>
                 </td>
             </tr>
         </table>

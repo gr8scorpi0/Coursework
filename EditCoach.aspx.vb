@@ -22,10 +22,11 @@ Public Class EditCoach
         Dim dSet = New DataSet
         dAdapter.Fill(dSet, "CoachLogins")
 
-        If username_TextBox.Text.Length <= 0 Or Password_TextBox.Text.Length <= 0 Then
+        If username_TextBox.Text.Length <= 0 Or Password_TextBox.Text.Length < 8 Then
             error_Label.Visible = True
             error_Image.Visible = True
-            error_Label.Text = "Username or Password format are invalid make sure each section is completed."
+            error_Label.Text = "Username or Password format are invalid make sure each section is completed" &
+                " and the password has at least 8 Characters."
 
         ElseIf dSet.Tables("CoachLogins").Rows.Count = 1 Then
             error_Label.Visible = True
@@ -70,9 +71,9 @@ Public Class EditCoach
             con.Close()
             Done_Label.Visible = True
             done_Image.Visible = True
-            Done_Label.Text = username_TextBox.Text & "Coach was removed successfully."
+            Done_Label.Text = username_TextBox.Text & " Coach was removed successfully."
         ElseIf dSet.Tables("CoachLogins").Rows.Count = 0 Then
-            error_Label.Visible = True
+            error_Image.Visible = True
             error_Label.Visible = True
             error_Label.Text = "This user does not exist. Try Again."
         End If

@@ -7,6 +7,7 @@ Public Class Progress
             Response.Redirect("Homepage.aspx")
         End If
         Session("NewQuestion") = "True"
+        Session("Score") = 0
     End Sub
 
 

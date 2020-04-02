@@ -28,7 +28,7 @@ Public Class SignUp
             error_Label.Text = "Password needs to have at least 8 characters."
         ElseIf dSet.Tables("UserLogins").Rows.Count = 1 Then
             error_Label.Visible = True
-            error_Label.Text = "Username already exists"
+            error_Label.Text = "Username already exists."
             error_Image.Visible = True
 
         ElseIf dSet.Tables("UserLogins").Rows.Count = 0 Then
@@ -38,7 +38,7 @@ Public Class SignUp
             con.Open()
             cmd.ExecuteNonQuery()
             con.Close()
-            Session("Username") = UsernameTextBox
+            Session("Username") = UsernameTextBox.Text
             Response.Redirect("HomePageLogged-in.aspx")
 
         End If

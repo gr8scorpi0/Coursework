@@ -11,6 +11,7 @@ Public Class ProgressGraph
             Response.Redirect("Homepage.aspx")
         End If
         Session("NewQuestion") = "True"
+        Session("Score") = 0
 
         'Collects the scores achieved by the user 
         Dim con As New SqlConnection(ConnectionStrings("SomeeConnectionString").ConnectionString)
@@ -49,11 +50,11 @@ Public Class ProgressGraph
         Dim x As Integer
         Dim font As New Font("ariel", 24)
         For rowcount = 0 To ds.Tables(0).Rows.Count - 1
-
+            testscore = ds.Tables("TrackScore").Rows(rowcount).Item("QuizScore") 'Gets the score from the table
             height = 100 * testscore
             x = rowcount * 100
             top = 1000 - height
-            testscore = ds.Tables("TrackScore").Rows(rowcount).Item("QuizScore") 'Gets the score from the table
+
             'bar
             shape.FillRectangle(Brushes.Goldenrod, x, top, 95, height + 100)
             'axis

@@ -42,11 +42,16 @@ Public Class HomePage
 
             If dSet.Tables("CoachLogins").Rows.Count = 1 Then
                 Response.Redirect("HomePage-Coach.aspx") 'If it matches with a row on the table than it redirects to the HomePage dedicated to the Coaches
+            ElseIf UsernameTextBox.Text.Length <= 0 Or PasswordTextBox.Text.Length <= 0 Then
+                error_Image.Visible = True
+                Error_Label.Visible = True
+                Error_Label.Text = "Empty Password or Username field. Please complete both."
             Else ' If none of the above is valid then and error message is displayed
                 error_Image.Visible = True
                 Error_Label.Visible = True
                 Error_Label.Text = "Incorrect Password or Username"
             End If
+
 
 
         End If

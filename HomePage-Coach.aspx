@@ -5,6 +5,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            color: #FFFFFF;
+            text-align: center;
+        }
+        .auto-style2 {
+            color: #FFFFFF;
+            text-align: center;
+            font-size: xx-large;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body style="background: #808080">
     <form id="form1" runat="server">
@@ -31,5 +43,9 @@
                  </asp:Panel>
         </div>
     </form>
+    <p class="auto-style2">
+        Welcome Coach,</p>
+    <p class="auto-style1">
+        Here you may upload new questions, edit existing ones or even add new coaches.</p>
 </body>
 </html>

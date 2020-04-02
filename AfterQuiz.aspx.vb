@@ -14,4 +14,8 @@
         Session("score") = 0
         Response.Redirect("Exercises.aspx")
     End Sub
+
+    Protected Sub Progress_Button_Click(sender As Object, e As EventArgs) Handles Progress_Button.Click
+        Session("score") = 0
+    End Sub
 End Class

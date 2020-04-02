@@ -8,6 +8,8 @@
             Username_Label.Text = Session("Username")
             Username_Label.Visible = True
         End If
+        Session("NewQuestion") = "True"
     End Sub
+
 
 End Class
