@@ -9,6 +9,7 @@
             Username_Label.Visible = True
         End If
         Session("NewQuestion") = "True"
+        Session("Score") = 0
     End Sub
 
 

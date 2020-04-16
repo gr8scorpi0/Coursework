@@ -58,7 +58,7 @@ Public Class ProgressGraph
             'bar
             shape.FillRectangle(Brushes.Goldenrod, x, top, 95, height + 100)
             'axis
-            shape.FillRectangle(Brushes.White, 0, 0, 5, height + 20)
+            shape.FillRectangle(Brushes.White, 0, 0, 5, 995)
             shape.FillRectangle(Brushes.White, 0, 995, (x + 95) + 10, 5)
             'text w/ score
             shape.DrawString(testscore, font, Brushes.White, x + 35, top)

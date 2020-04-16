@@ -2,6 +2,7 @@
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Session("Score") = 0
         If Session.Item("Username") Is Nothing Then
             Response.Redirect("Homepage.aspx")
         End If
